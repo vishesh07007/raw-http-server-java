@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws Exception{
 
         ServerSocket server = new ServerSocket(8080);
-        System.out.println("sabaas!");
+        System.out.println("Server running on port 8080");
         while(true){
 
             Socket socket = server.accept();
@@ -25,7 +25,7 @@ public class Main {
             String response = "HTTP/1.1 200 OK\r\n"
                     + "Content-Type: text/plain\r\n"
                     + "\r\n"
-                    + "Hello from raw server";
+                    + "sabbas!";
 
             out.write(response.getBytes());
             out.flush();
